@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 
 const mongoose = require("mongoose");
@@ -16,7 +17,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/globalintegrityshit");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/jorgeaguilarproject3");
 
 // Start the API server
 app.listen(PORT, function() {
